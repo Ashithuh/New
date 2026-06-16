@@ -1,0 +1,39 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #f5d0ff);
+    min-height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    color: #333;
+}
+
+
+h1 {
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #6a1b9a;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
