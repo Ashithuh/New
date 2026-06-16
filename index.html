@@ -1,25 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashitha's website</title>
+  <title>Ashitha | Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <style>
-  img{
-    width: 100px;
+    :root {
+      --bg-color: #09090b;
+      /* Deep zinc background */
+      --card-bg: #18181b;
+      --card-hover: #27272a;
+      --border-color: #27272a;
+      --border-hover: #3f3f46;
+      --text-main: #fafafa;
+      --text-muted: #a1a1aa;
+    }
 
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    /* Minimalist Navigation */
+    nav {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-main);
+      letter-spacing: -0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text-main);
+    }
+
+    /* Bento Grid Layout */
+    .bento-grid {
+      width: 100%;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 50px;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .bento-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 35px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bento-card:hover {
+      border-color: var(--border-hover);
+      background-color: var(--card-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Card Specifics */
+    .card-hero {
+      grid-column: span 2;
+      justify-content: center;
+    }
+
+    .card-hero h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .card-hero p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 90%;
+    }
+
+    .card-about h3,
+    .card-achievements h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: var(--text-main);
+    }
+
+    /* Tags for interests */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .status-box {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Achievement List */
+    .achievement-item {
+      margin-bottom: 20px;
+    }
+
+    .achievement-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .achievement-title {
+      font-weight: 500;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .achievement-org {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-hero {
+        grid-column: span 1;
+      }
+
+      .card-hero h1 {
+        font-size: 2.2rem;
+      }
+    }
   </style>
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<h1>My name is Ashitha</h1>
-<h2>I am studying in S2 CE</h2>
-<h3>I like anime & music</h3>
-<p>I like dogs <br>
-  currently on drugs(paracetamol)</p>
-  <p>Hi, Im Nithin. im also high</p>
-  <img src="./flower github.webp" alt="" srcset="">
+
+  <nav>
+    <div class="logo">ashitha.</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Index</a>
+      <a href="blog.html">Journal</a>
+    </div>
+  </nav>
+
+  <main class="bento-grid">
+
+    <!-- Hero / Intro Card -->
+    <div class="bento-card card-hero">
+      <h1>I'm Ashitha.</h1>
+      <p>I am an S2 Civil Engineering student currently studying at Government Engineering College, Barton Hill in
+        Thiruvananthapuram.</p>
+    </div>
+
+    <!-- Personal Interests Card -->
+    <div class="bento-card card-about">
+      <h3>Interests</h3>
+      <div class="tags">
+        <span class="tag">Anime</span>
+        <span class="tag">Music</span>
+        <span class="tag">Dogs</span>
+        <span class="tag">Civil Eng</span>
+      </div>
+      <div class="status-box">
+        System Status: Running on Paracetamol
+      </div>
+    </div>
+
+    <!-- Achievements Card (Spans full width on bottom) -->
+    <div class="bento-card card-achievements"
+      style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+      <div style="grid-column: 1 / -1;">
+        <h3>Selected Achievements</h3>
+      </div>
+
+      <div class="achievement-item">
+        <div class="achievement-title">Scholar of the Year 2025-26</div>
+        <div class="achievement-org">Nikola Tesla Scholarship • ISTE SC GECBH</div>
+      </div>
+
+      <div class="achievement-item">
+        <div class="achievement-title">Kick Off 6.0 Winner</div>
+        <div class="achievement-org">Exordium 4.0 • IEEE</div>
+      </div>
+    </div>
+
+  </main>
+
 </body>
+
 </html>

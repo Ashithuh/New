@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surviving S2 - Ashitha's Blog</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1a1520;
+            --card-bg: #292132;
+            --text-main: #fcecf4;
+            --text-muted: #d0c4cd;
+            --accent-color: #f6a1cb;
+            --accent-hover: #ffb8da;
+            --border-color: #40324d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        nav {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent-hover);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 40px 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--accent-hover);
+        }
+
+        .article-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .article-content .meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: var(--accent-hover);
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div style="font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 600; color: var(--accent-color);">
+            Ashitha.
+        </div>
+        <div class="nav-links">
+            <a href="index.html">About Me</a>
+            <a href="blog.html" class="active">Blog</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <a href="blog.html" class="back-btn">← Back to Journal</a>
+
+        <article class="article-content">
+            <h1>Surviving S2 on Paracetamol and Anime</h1>
+            <div class="meta">Written by Ashitha • May 12, 2026</div>
+
+            <p>If there's one thing S2 Civil Engineering has taught me, it's that coffee isn't always enough. Sometimes,
+                you just need a good dose of paracetamol and a relaxing anime episode to get through the week.</p>
+
+            <blockquote>
+                "Engineering is 10% learning the formulas and 90% learning how to operate under extreme sleep
+                deprivation."
+            </blockquote>
+
+            <p>Lately, my routine has been pretty simple: wake up, go to classes at Barton Hill, hang out with some
+                campus dogs, and try to make sense of the syllabus. The Kick Off 6.0 event was a blast, and winning it
+                gave me a massive confidence boost!</p>
+
+            <p>But when I'm home and the headache kicks in, I just tune out the world with my favorite music playlists.
+                Whether it's the soothing OSTs from my top anime or just playing with dogs, you have to find those
+                little pockets of peace.</p>
+        </article>
+    </main>
+
+</body>
+
+</html>

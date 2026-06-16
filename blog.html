@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashitha's Space - Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #1a1520;
+      --card-bg: #292132;
+      --text-main: #fcecf4;
+      --text-muted: #d0c4cd;
+      --accent-color: #f6a1cb;
+      --accent-hover: #ffb8da;
+      --border-color: #40324d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Lora', serif; font-weight: 600; color: var(--accent-color); }
+
+    nav {
+      width: 100%; max-width: 800px; display: flex; justify-content: space-between;
+      padding: 20px; margin-top: 20px; border-bottom: 1px solid var(--border-color);
+    }
+    .nav-links { display: flex; gap: 20px; }
+    nav a { color: var(--text-main); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+    nav a:hover, nav a.active { color: var(--accent-hover); }
+
+    .container { width: 100%; max-width: 800px; padding: 40px 20px; animation: fadeIn 0.5s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    .blog-header { text-align: center; margin-bottom: 40px; }
+    .blog-header h1 { font-size: 2.5rem; }
+
+    .blog-card {
+      display: block;
+      text-decoration: none;
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(246, 161, 203, 0.15);
+      border-color: var(--accent-color);
+    }
+    .blog-card h2 { font-size: 1.4rem; margin-bottom: 10px; color: var(--accent-color); }
+    .blog-card .meta { font-size: 0.85rem; color: var(--accent-hover); margin-bottom: 15px; }
+    .blog-card p { color: var(--text-muted); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div style="font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 600; color: var(--accent-color);">
+      Ashitha.
+    </div>
+    <div class="nav-links">
+      <a href="index.html">About Me</a>
+      <a href="blog.html" class="active">Blog</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="blog-header">
+      <h1>My Journal</h1>
+      <p style="color: var(--text-muted);">Thoughts on engineering, anime, and surviving S2.</p>
+    </div>
+
+    <a href="post.html" class="blog-card">
+      <h2>Surviving S2 on Paracetamol and Anime</h2>
+      <div class="meta">May 12, 2026 • 3 min read</div>
+      <p>Engineering at Barton Hill is no joke. Between the assignments, the events, and trying to keep my sanity intact, here is how I manage to balance studying Civil Engineering with my daily dose of anime...</p>
+    </a>
+
+    <a href="#" class="blog-card">
+      <h2>The Nikola Tesla Scholarship Journey</h2>
+      <div class="meta">March 17, 2026 • 5 min read</div>
+      <p>Winning the Scholar of the Year 2025-26 was an inspiring journey filled with dedication. Here's a look back at the consistent effort it took to stand out among my peers...</p>
+    </a>
+  </main>
+
+</body>
+</html>
