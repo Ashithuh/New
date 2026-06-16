@@ -10,12 +10,20 @@ body {
     background: linear-gradient(135deg, #ffe4ec, #f5d0ff);
     min-height: 100vh;
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: #333;
 }
 
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 90%;
+}
 
 h1 {
     color: #e91e63;
@@ -32,6 +40,14 @@ p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+img {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 img:hover {
